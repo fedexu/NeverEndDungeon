@@ -19,11 +19,13 @@ public class BasicMovement : MonoBehaviour
     void Update()
     {
 
-        animator.SetFloat("Speed", Mathf.Abs(Input.GetAxis("Horizontal")));
+        Vector3 horizontal = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
 
-        Vector3 horizontal = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0.0f);
+        animator.SetFloat("SpeedX", Mathf.Abs(horizontal.x));
+        animator.SetFloat("SpeedY", Mathf.Abs(horizontal.y));
+        animator.SetFloat("Magnitude", Mathf.Abs(horizontal.magnitude));
+
         transform.position = transform.position + horizontal * Time.deltaTime;
-
         flip();
     }
 
