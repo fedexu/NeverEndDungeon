@@ -7,6 +7,8 @@ public class BasicMovement : MonoBehaviour
 
     public Animator animator;
 
+    public GameObject sprite;
+
     private bool facingRight = true; 
 
     // Start is called before the first frame update
@@ -32,9 +34,9 @@ public class BasicMovement : MonoBehaviour
     private void flip(){
         if (Input.GetAxis("Horizontal") > 0 && !facingRight || Input.GetAxis("Horizontal") < 0 && facingRight){
             facingRight = !facingRight;
-            Vector3 scale = transform.localScale;
+            Vector3 scale = sprite.transform.localScale;
             scale.x *= -1;
-            transform.localScale = scale;
+            sprite.transform.localScale = scale;
         }
     }
 
