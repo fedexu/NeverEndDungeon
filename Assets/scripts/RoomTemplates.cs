@@ -9,6 +9,8 @@ public class RoomTemplates : MonoBehaviour
     public GameObject[] bottomRooms;
     public GameObject[] leftRooms;
     public GameObject[] rightRooms;
+
+    public GameObject closedRoom;
     // Start is called before the first frame update
     void Start()
     {
