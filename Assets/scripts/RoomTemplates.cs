@@ -10,7 +10,15 @@ public class RoomTemplates : MonoBehaviour
     public GameObject[] leftRooms;
     public GameObject[] rightRooms;
 
-    public GameObject closedRoom;
+    public GameObject closedRoomT;
+    public GameObject closedRoomB;
+    public GameObject closedRoomL;
+    public GameObject closedRoomR;
+
+    //controller Variables
+    public List<GameObject> rooms;
+    public int maxRoomsNumber = 32;
+
     // Start is called before the first frame update
     void Start()
     {
