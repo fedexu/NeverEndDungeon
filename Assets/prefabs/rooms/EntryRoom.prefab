@@ -47,7 +47,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingDirection: 1
   spawned: 0
-  spawedRoomName: 
   thisIsClosedRoom: 0
   waitTime: 4
 --- !u!61 &968337427876518740
@@ -144,7 +143,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingDirection: 3
   spawned: 0
-  spawedRoomName: 
   thisIsClosedRoom: 0
   waitTime: 4
 --- !u!61 &968337427960443549
@@ -241,7 +239,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingDirection: 2
   spawned: 0
-  spawedRoomName: 
   thisIsClosedRoom: 0
   waitTime: 4
 --- !u!61 &968337428015883415
@@ -338,7 +335,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingDirection: 4
   spawned: 0
-  spawedRoomName: 
   thisIsClosedRoom: 0
   waitTime: 4
 --- !u!61 &968337428263564328
@@ -401,6 +397,7 @@ GameObject:
   - component: {fileID: 968337428604567841}
   - component: {fileID: 968337428604567846}
   - component: {fileID: 114092097675615694}
+  - component: {fileID: 114853184450168410}
   m_Layer: 0
   m_Name: EntryRoom
   m_TagString: Untagged
@@ -977,6 +974,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8fb0ad0861b8e4005a1459a8efde7c08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114853184450168410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968337428604567845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52eaf1ff5782e4c9e8c1dfc2bcff4672, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1515713469409959447

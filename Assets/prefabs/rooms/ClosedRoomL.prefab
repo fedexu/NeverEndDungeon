@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 968337428604567844}
   - component: {fileID: 968337428604567841}
   - component: {fileID: 968337428604567846}
+  - component: {fileID: 114348630328733874}
   m_Layer: 0
   m_Name: ClosedRoomL
   m_TagString: Untagged
@@ -95,55 +96,72 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 6991377636194301531}
     m_ColliderPaths:
-    - - X: -9100000
+    - - X: 10100000
         Y: 3899999
-      - X: -9600000
+      - X: 9600000
         Y: 3899999
-      - X: -9600000
+      - X: 9600000
         Y: 3100000
-      - X: -9100000
+      - X: 10100000
         Y: 3100000
   - m_Collider: {fileID: 4823335035168941944}
     m_ColliderPaths:
-    - - X: -9099999
+    - - X: 10099999
         Y: 3200000
-      - X: -9599999
+      - X: 9599999
         Y: 3200000
-      - X: -9599999
+      - X: 9599999
         Y: 1600000
-      - X: -9099999
+      - X: 10099999
         Y: 1600000
   - m_Collider: {fileID: 4823335034936464535}
     m_ColliderPaths:
-    - - X: -9099999
+    - - X: 10099999
         Y: 1600000
-      - X: -9599999
+      - X: 9599999
         Y: 1600000
-      - X: -9599999
+      - X: 9599999
         Y: 0
-      - X: -9099999
+      - X: 10099999
         Y: 0
   - m_Collider: {fileID: 7263992887833876186}
     m_ColliderPaths:
-    - - X: -9099999
+    - - X: 10099999
         Y: 0
-      - X: -9599999
+      - X: 9599999
         Y: 0
-      - X: -9599999
+      - X: 9599999
         Y: -1600000
-      - X: -9099999
+      - X: 10099999
         Y: -1600000
   m_CompositePaths:
     m_Paths:
-    - - {x: -0.9099999, y: -0.16}
-      - {x: -0.9099999, y: 0.32}
-      - {x: -0.91, y: 0.32}
-      - {x: -0.91, y: 0.3899999}
-      - {x: -0.96000004, y: 0.3899999}
-      - {x: -0.96000004, y: 0.31}
-      - {x: -0.9599999, y: 0.31}
-      - {x: -0.9599999, y: -0.16}
+    - - {x: 1.0099999, y: -0.16}
+      - {x: 1.0099999, y: 0.31}
+      - {x: 1.01, y: 0.31}
+      - {x: 1.01, y: 0.3899999}
+      - {x: 0.96000004, y: 0.3899999}
+      - {x: 0.96000004, y: 0.32}
+      - {x: 0.9599999, y: 0.32}
+      - {x: 0.9599999, y: -0.16}
   m_VertexDistance: 0.0005
+--- !u!114 &114348630328733874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968337428604567845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52eaf1ff5782e4c9e8c1dfc2bcff4672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomType: 
+  topRoom: {fileID: 0}
+  bottomRoom: {fileID: 0}
+  rightRoom: {fileID: 0}
+  leftRoom: {fileID: 0}
 --- !u!1001 &968337428444244783
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -154,7 +172,7 @@ PrefabInstance:
     - target: {fileID: 5737538004018433104, guid: a5346839f6693454e83a7c392ebf3f69,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.9599999
+      value: 0.9599999
       objectReference: {fileID: 0}
     - target: {fileID: 5737538004018433104, guid: a5346839f6693454e83a7c392ebf3f69,
         type: 3}
@@ -235,7 +253,7 @@ PrefabInstance:
     - target: {fileID: 5737538004018433104, guid: a5346839f6693454e83a7c392ebf3f69,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.9599999
+      value: 0.9599999
       objectReference: {fileID: 0}
     - target: {fileID: 5737538004018433104, guid: a5346839f6693454e83a7c392ebf3f69,
         type: 3}
@@ -321,7 +339,7 @@ PrefabInstance:
     - target: {fileID: 7619768178386703515, guid: a7927c745324a40c3b0a41e21e15b2e3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.9599999
+      value: 0.9599999
       objectReference: {fileID: 0}
     - target: {fileID: 7619768178386703515, guid: a7927c745324a40c3b0a41e21e15b2e3,
         type: 3}
@@ -397,7 +415,7 @@ PrefabInstance:
     - target: {fileID: 7815545434345661892, guid: 5b22be6ee4ef6453d814ebb98e238751,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.96
+      value: 0.96
       objectReference: {fileID: 0}
     - target: {fileID: 7815545434345661892, guid: 5b22be6ee4ef6453d814ebb98e238751,
         type: 3}
