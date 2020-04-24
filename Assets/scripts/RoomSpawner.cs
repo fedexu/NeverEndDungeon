@@ -10,11 +10,10 @@ public class RoomSpawner : MonoBehaviour
     // 2 -> need top door
     // 3 -> need left door
     // 4 -> need right door
-    public bool spawned = false;
-    public bool thisIsClosedRoom = false;
-    public float waitTime = 2f;
     public RoomDescriber describer;
-
+    public bool spawned = false;
+    private bool thisIsClosedRoom = false;
+    private float waitTime = 4f;
     private RoomTemplates templates;
     private int rand;
 

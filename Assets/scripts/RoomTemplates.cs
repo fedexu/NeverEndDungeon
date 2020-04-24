@@ -18,7 +18,7 @@ public class RoomTemplates : MonoBehaviour
     public List<GameObject> rooms;
     public int maxRoomsNumber = 32;
 
-    private float waitTime = 2f;
+    private float waitTime = 4f;
     private bool completedDungeon = false;
 
     // Start is called before the first frame update
