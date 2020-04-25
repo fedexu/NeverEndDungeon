@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4278650174917234276}
   - component: {fileID: 4278650174917234277}
   m_Layer: 0
-  m_Name: master_tiles_4
+  m_Name: guard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -54,7 +54,7 @@ GameObject:
   - component: {fileID: 2931478428777722622}
   - component: {fileID: 2931478428777722623}
   m_Layer: 0
-  m_Name: master_tiles_17
+  m_Name: arch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

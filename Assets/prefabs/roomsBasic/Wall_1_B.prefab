@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 7023698180785244153}
   - component: {fileID: 7023698180785244154}
   m_Layer: 0
-  m_Name: master_tiles_20
+  m_Name: guard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 7023698180968064700}
   - component: {fileID: 7023698180968064701}
   m_Layer: 0
-  m_Name: master_tiles_1
+  m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

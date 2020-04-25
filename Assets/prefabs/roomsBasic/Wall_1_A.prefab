@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4393032661290199367}
   - component: {fileID: 4393032661290199366}
   m_Layer: 0
-  m_Name: master_tiles_2
+  m_Name: guard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90,9 +90,10 @@ GameObject:
   - component: {fileID: 4393032662411196448}
   - component: {fileID: 4393032662411196449}
   - component: {fileID: 2769914394292264440}
+  - component: {fileID: 7742348874759599775}
   m_Layer: 0
   m_Name: Wall_1_A
-  m_TagString: Untagged
+  m_TagString: Wall_1_A
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,6 +151,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.161, y: 0.05}
   m_EdgeRadius: 0
+--- !u!114 &7742348874759599775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4393032662411196454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3404ed9da70374780a00c426ac825194, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walls:
+  - {fileID: 21300002, guid: a5a8ad5de40724983a7a851c3b0a70e2, type: 3}
+  - {fileID: 21300000, guid: a5a8ad5de40724983a7a851c3b0a70e2, type: 3}
+  - {fileID: 21300012, guid: a5a8ad5de40724983a7a851c3b0a70e2, type: 3}
+  - {fileID: 21300014, guid: a5a8ad5de40724983a7a851c3b0a70e2, type: 3}
+  - {fileID: 21300016, guid: a5a8ad5de40724983a7a851c3b0a70e2, type: 3}
+  - {fileID: 21300018, guid: a5a8ad5de40724983a7a851c3b0a70e2, type: 3}
+  - {fileID: 21300020, guid: a5a8ad5de40724983a7a851c3b0a70e2, type: 3}
+  - {fileID: 21300022, guid: a5a8ad5de40724983a7a851c3b0a70e2, type: 3}
+  - {fileID: 21300024, guid: a5a8ad5de40724983a7a851c3b0a70e2, type: 3}
+  - {fileID: 21300026, guid: a5a8ad5de40724983a7a851c3b0a70e2, type: 3}
+  guards: []
+  sideGuards: []
+  backGuards: []
 --- !u!1 &4393032662519743350
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,7 +188,7 @@ GameObject:
   - component: {fileID: 4393032662519743345}
   - component: {fileID: 4393032662519743344}
   m_Layer: 0
-  m_Name: master_tiles_1
+  m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

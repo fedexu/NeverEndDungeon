@@ -12,7 +12,6 @@ public class RoomSpawner : MonoBehaviour
     // 4 -> need right door
     public RoomDescriber describer;
     public bool spawned = false;
-    private bool thisIsClosedRoom = false;
     private float waitTime = 4f;
     private RoomTemplates templates;
     private int rand;
@@ -86,11 +85,6 @@ public class RoomSpawner : MonoBehaviour
                 Destroy(other);
                 Destroy(gameObject);
             }
-            // else if ((other.GetComponent<RoomSpawner>().spawned == false && spawned == false) || other.GetComponent<RoomSpawner>().thisIsClosedRoom == true)
-            // {
-            //     thisIsClosedRoom = true;
-            //     Destroy(gameObject);
-            // }
             // if i (spawn point ) will be created on top on another, I've find an already created room (probably)
             spawned = true;
         }
