@@ -3935,6 +3935,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TopSpawnPointRoom
       objectReference: {fileID: 0}
+    - target: {fileID: 7095549246195380356, guid: 5d473939a25d548e28bfc8d904b57e36,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7095549246195380359, guid: 5d473939a25d548e28bfc8d904b57e36,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4009,6 +4014,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RightSpawnPointRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 7095549246195380356, guid: 1b5e67ec365f2486ea8eab6939d0ea55,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7095549246195380359, guid: 1b5e67ec365f2486ea8eab6939d0ea55,
         type: 3}
@@ -4140,6 +4150,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StopSpawnPoint
       objectReference: {fileID: 0}
+    - target: {fileID: 4796022876168390588, guid: ff4e855dd11904c71a1654ef0d729263,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff4e855dd11904c71a1654ef0d729263, type: 3}
 --- !u!4 &8357054046272631574 stripped
@@ -4159,6 +4174,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BottomSpawnPointRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 7095549246195380356, guid: 8525ec89339ba4c73a00e7d952ed048a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7095549246195380359, guid: 8525ec89339ba4c73a00e7d952ed048a,
         type: 3}
@@ -4234,6 +4254,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LeftSpawnPointRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 7095549246195380356, guid: 2755706b8755344799665ed54296fe43,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7095549246195380359, guid: 2755706b8755344799665ed54296fe43,
         type: 3}

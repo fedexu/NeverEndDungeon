@@ -20,6 +20,7 @@ public class WallGenerator : MonoBehaviour
     private static int cosmeticPercentage = 100;
     private static int cosmeticCollisionPercentage = 50;
     private static int columnPercentage = 50;
+    private static int torchPercentage = 400;
 
     // Start is called before the first frame update
     void Start()
@@ -38,10 +39,23 @@ public class WallGenerator : MonoBehaviour
             case "Wall_2_E":
                 randomSpriteGenerator("guard", sideGuards, guardPercentage);
                 break;
+            case "torch":
+                randomTorch("Torch", torchPercentage);
+                break;
             default:
                 Debug.Log(component + " : Not handled component");
                 break;
         }
+    }
+
+    private bool randomTorch(string elementToFind, int chancePercentage){
+        GameObject torch = transform.Find(elementToFind).transform.gameObject;
+
+        if (Random.Range(0, percentagePrecision) <= chancePercentage){
+            torch.SetActive(false);
+            return true;
+        }
+        return false;
     }
 
     private bool randomSpriteGenerator(string elementToFind, Sprite[] spritesToChoose, int chancePercentage)

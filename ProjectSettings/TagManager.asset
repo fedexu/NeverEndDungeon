@@ -10,6 +10,7 @@ TagManager:
   - Wall_2_A
   - Wall_2_D
   - Wall_2_E
+  - torch
   layers:
   - Default
   - TransparentFX
