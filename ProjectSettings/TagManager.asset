@@ -11,6 +11,9 @@ TagManager:
   - Wall_2_D
   - Wall_2_E
   - torch
+  - FloorLight
+  - FloorDark
+  - Stairs
   layers:
   - Default
   - TransparentFX
