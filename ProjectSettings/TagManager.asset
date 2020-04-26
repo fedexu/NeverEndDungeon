@@ -7,6 +7,9 @@ TagManager:
   - SpawnPoint
   - Rooms
   - Wall_1_A
+  - Wall_2_A
+  - Wall_2_D
+  - Wall_2_E
   layers:
   - Default
   - TransparentFX

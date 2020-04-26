@@ -13,6 +13,7 @@ public class WallGenerator : MonoBehaviour
     // 100 for 1% => (1) , 1000 for 0.1% => (1) && 1% => (10) ecc..
     private static int percentagePrecision = 1000;
     private static int wallPercentage = 400;
+    private static int guardPercentage = 500;
 
     // Start is called before the first frame update
     void Start()
@@ -27,49 +28,32 @@ public class WallGenerator : MonoBehaviour
         switch (component)
         {
             case "Wall_1_A":
-                wallsRandomGenerator();
+                randomSpriteGenerator("wall", walls, wallPercentage);
+                randomSpriteGenerator("guard", guards, guardPercentage);
                 break;
-            // case 4:
-            //     guardsRandomGenerator();
-            //     break;
-            // case 3:
-            //     sideGuardsRandomGenerator();
-            //     break;
-            // case 2:
-            //     backGuardsRandomGenerator();
-            //     break;
+            case "Wall_2_A":
+                randomSpriteGenerator("guard", backGuards, guardPercentage);
+                break;
+            case "Wall_2_D":
+            case "Wall_2_E":
+                randomSpriteGenerator("guard", sideGuards, guardPercentage);
+                break;
             default:
                 Debug.Log(component + " : Not handled component");
                 break;
         }
     }
 
-    private void wallsRandomGenerator()
+    private void randomSpriteGenerator(string elementToFind, Sprite[] spritesToChoose, int chancePercentage)
     {
-        SpriteRenderer spriteRenderer = transform.Find("wall").transform.gameObject.GetComponent<SpriteRenderer>();
+        SpriteRenderer spriteRenderer = transform.Find(elementToFind).transform.gameObject.GetComponent<SpriteRenderer>();
         // default the first occurrence of the sprites
-        spriteRenderer.sprite = walls[0];
+        spriteRenderer.sprite = spritesToChoose[0];
 
-        if (Random.Range(0, percentagePrecision) <= wallPercentage)
+        if (Random.Range(0, percentagePrecision) <= chancePercentage)
         {
-            spriteRenderer.sprite = walls[Random.Range(1, walls.Length)];
+            spriteRenderer.sprite = spritesToChoose[Random.Range(1, spritesToChoose.Length)];
         }
-
-    }
-
-    private void guardsRandomGenerator()
-    {
-
-    }
-
-    private void sideGuardsRandomGenerator()
-    {
-
-    }
-
-    private void backGuardsRandomGenerator()
-    {
-
     }
 
 }
