@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 114932678846875066}
   m_Layer: 0
   m_Name: Wall_1_B
-  m_TagString: torch
+  m_TagString: Wall_1_B
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,13 +112,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3404ed9da70374780a00c426ac825194, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walls: []
-  guards: []
-  sideGuards: []
-  backGuards: []
-  cosmetics: []
-  cosmeticsCollision: []
-  column: []
 --- !u!1 &7023698180785244152
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,7 +180,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300040, guid: a5a8ad5de40724983a7a851c3b0a70e2, type: 3}
+  m_Sprite: {fileID: 21300012, guid: b8fb380ca58574dae84c1c7bd6507479, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -266,7 +259,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300002, guid: a5a8ad5de40724983a7a851c3b0a70e2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fa007eda4f3d9426e95c17a276476e25, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1754327528531954303}
   - component: {fileID: 1754327528531954300}
+  - component: {fileID: 1398367446686484413}
   m_Layer: 0
   m_Name: Torch
-  m_TagString: Untagged
+  m_TagString: torch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,6 +44,18 @@ SortingGroup:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1398367446686484413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754327528531954301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73a501a82209c416db8e246334f2e082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1754327529520886905
 GameObject:
   m_ObjectHideFlags: 0

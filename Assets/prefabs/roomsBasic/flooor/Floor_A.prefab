@@ -45,25 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73edffc95f16f4b16a6613aa64b669d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floorLight:
-  - {fileID: 21300068, guid: a5a8ad5de40724983a7a851c3b0a70e2, type: 3}
-  - {fileID: 21300058, guid: a5a8ad5de40724983a7a851c3b0a70e2, type: 3}
-  - {fileID: 21300060, guid: a5a8ad5de40724983a7a851c3b0a70e2, type: 3}
-  - {fileID: 21300062, guid: a5a8ad5de40724983a7a851c3b0a70e2, type: 3}
-  - {fileID: 21300064, guid: a5a8ad5de40724983a7a851c3b0a70e2, type: 3}
-  - {fileID: 21300066, guid: a5a8ad5de40724983a7a851c3b0a70e2, type: 3}
-  - {fileID: 21300068, guid: a5a8ad5de40724983a7a851c3b0a70e2, type: 3}
-  floorDark:
-  - {fileID: 21300042, guid: a5a8ad5de40724983a7a851c3b0a70e2, type: 3}
-  - {fileID: 21300046, guid: a5a8ad5de40724983a7a851c3b0a70e2, type: 3}
-  - {fileID: 21300048, guid: a5a8ad5de40724983a7a851c3b0a70e2, type: 3}
-  - {fileID: 21300052, guid: a5a8ad5de40724983a7a851c3b0a70e2, type: 3}
-  - {fileID: 21300054, guid: a5a8ad5de40724983a7a851c3b0a70e2, type: 3}
-  - {fileID: 21300056, guid: a5a8ad5de40724983a7a851c3b0a70e2, type: 3}
-  - {fileID: 21300050, guid: a5a8ad5de40724983a7a851c3b0a70e2, type: 3}
-  - {fileID: 21300096, guid: a5a8ad5de40724983a7a851c3b0a70e2, type: 3}
-  - {fileID: 21300092, guid: a5a8ad5de40724983a7a851c3b0a70e2, type: 3}
-  - {fileID: 21300042, guid: a5a8ad5de40724983a7a851c3b0a70e2, type: 3}
+  floorLight: []
+  floorDark: []
+  stairs: []
 --- !u!210 &6444912449192800653
 SortingGroup:
   m_ObjectHideFlags: 0

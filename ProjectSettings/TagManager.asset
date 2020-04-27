@@ -14,6 +14,16 @@ TagManager:
   - FloorLight
   - FloorDark
   - Stairs
+  - Wall_1_A_noCosmetic
+  - Wall_1_B
+  - Wall_1_C
+  - Wall_2_B
+  - Wall_2_C
+  - Wall_2_F
+  - Wall_2_G
+  - Wall_2_H
+  - Wall_2_I
+  - Wall_2_L
   layers:
   - Default
   - TransparentFX
