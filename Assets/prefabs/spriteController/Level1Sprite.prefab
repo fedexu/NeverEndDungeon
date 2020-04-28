@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5111029086045976039
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5111029086045976037}
+  - component: {fileID: 5111029086045976038}
+  m_Layer: 0
+  m_Name: Level1Sprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5111029086045976037
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5111029086045976039}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 550.73926, y: 364.44778, z: -3.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5111029086045976038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5111029086045976039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 869d12e7d123444c7801738edf5b130c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walls:
+  - {fileID: 21300000, guid: fa007eda4f3d9426e95c17a276476e25, type: 3}
+  - {fileID: 21300002, guid: fa007eda4f3d9426e95c17a276476e25, type: 3}
+  - {fileID: 21300004, guid: fa007eda4f3d9426e95c17a276476e25, type: 3}
+  - {fileID: 21300006, guid: fa007eda4f3d9426e95c17a276476e25, type: 3}
+  - {fileID: 21300008, guid: fa007eda4f3d9426e95c17a276476e25, type: 3}
+  - {fileID: 21300010, guid: fa007eda4f3d9426e95c17a276476e25, type: 3}
+  - {fileID: 21300012, guid: fa007eda4f3d9426e95c17a276476e25, type: 3}
+  - {fileID: 21300014, guid: fa007eda4f3d9426e95c17a276476e25, type: 3}
+  - {fileID: 21300016, guid: fa007eda4f3d9426e95c17a276476e25, type: 3}
+  - {fileID: 21300018, guid: fa007eda4f3d9426e95c17a276476e25, type: 3}
+  guards:
+  - {fileID: 21300000, guid: b8fb380ca58574dae84c1c7bd6507479, type: 3}
+  - {fileID: 21300002, guid: b8fb380ca58574dae84c1c7bd6507479, type: 3}
+  backGuards:
+  - {fileID: 21300004, guid: b8fb380ca58574dae84c1c7bd6507479, type: 3}
+  - {fileID: 21300006, guid: b8fb380ca58574dae84c1c7bd6507479, type: 3}
+  sideGuards:
+  - {fileID: 21300008, guid: b8fb380ca58574dae84c1c7bd6507479, type: 3}
+  - {fileID: 21300010, guid: b8fb380ca58574dae84c1c7bd6507479, type: 3}
+  guardsAngleUp:
+  - {fileID: 21300012, guid: b8fb380ca58574dae84c1c7bd6507479, type: 3}
+  guardsAngleDown:
+  - {fileID: 21300014, guid: b8fb380ca58574dae84c1c7bd6507479, type: 3}
+  guardsRight:
+  - {fileID: 21300016, guid: b8fb380ca58574dae84c1c7bd6507479, type: 3}
+  guardsLeft:
+  - {fileID: 21300018, guid: b8fb380ca58574dae84c1c7bd6507479, type: 3}
+  arch:
+  - {fileID: 21300020, guid: b8fb380ca58574dae84c1c7bd6507479, type: 3}
+  cosmetics:
+  - {fileID: 21300000, guid: d79bc90adeea14e078d0f017c8f963db, type: 3}
+  - {fileID: 21300002, guid: d79bc90adeea14e078d0f017c8f963db, type: 3}
+  - {fileID: 21300004, guid: d79bc90adeea14e078d0f017c8f963db, type: 3}
+  - {fileID: 21300006, guid: d79bc90adeea14e078d0f017c8f963db, type: 3}
+  - {fileID: 21300008, guid: d79bc90adeea14e078d0f017c8f963db, type: 3}
+  - {fileID: 21300010, guid: d79bc90adeea14e078d0f017c8f963db, type: 3}
+  cosmeticsCollision:
+  - {fileID: 21300012, guid: d79bc90adeea14e078d0f017c8f963db, type: 3}
+  - {fileID: 21300014, guid: d79bc90adeea14e078d0f017c8f963db, type: 3}
+  - {fileID: 21300016, guid: d79bc90adeea14e078d0f017c8f963db, type: 3}
+  column:
+  - {fileID: 21300018, guid: d79bc90adeea14e078d0f017c8f963db, type: 3}
+  floorLight:
+  - {fileID: 21300000, guid: 0eefa1e01007349e7ae001f13cd0690b, type: 3}
+  - {fileID: 21300002, guid: 0eefa1e01007349e7ae001f13cd0690b, type: 3}
+  - {fileID: 21300004, guid: 0eefa1e01007349e7ae001f13cd0690b, type: 3}
+  - {fileID: 21300006, guid: 0eefa1e01007349e7ae001f13cd0690b, type: 3}
+  - {fileID: 21300008, guid: 0eefa1e01007349e7ae001f13cd0690b, type: 3}
+  - {fileID: 21300010, guid: 0eefa1e01007349e7ae001f13cd0690b, type: 3}
+  floorDark:
+  - {fileID: 21300012, guid: 0eefa1e01007349e7ae001f13cd0690b, type: 3}
+  - {fileID: 21300014, guid: 0eefa1e01007349e7ae001f13cd0690b, type: 3}
+  - {fileID: 21300016, guid: 0eefa1e01007349e7ae001f13cd0690b, type: 3}
+  - {fileID: 21300018, guid: 0eefa1e01007349e7ae001f13cd0690b, type: 3}
+  - {fileID: 21300020, guid: 0eefa1e01007349e7ae001f13cd0690b, type: 3}
+  - {fileID: 21300022, guid: 0eefa1e01007349e7ae001f13cd0690b, type: 3}
+  - {fileID: 21300024, guid: 0eefa1e01007349e7ae001f13cd0690b, type: 3}
+  - {fileID: 21300026, guid: 0eefa1e01007349e7ae001f13cd0690b, type: 3}
+  - {fileID: 21300028, guid: 0eefa1e01007349e7ae001f13cd0690b, type: 3}
+  - {fileID: 21300030, guid: 0eefa1e01007349e7ae001f13cd0690b, type: 3}
+  - {fileID: 21300032, guid: 0eefa1e01007349e7ae001f13cd0690b, type: 3}
+  - {fileID: 21300034, guid: 0eefa1e01007349e7ae001f13cd0690b, type: 3}
+  stairs:
+  - {fileID: 21300036, guid: 0eefa1e01007349e7ae001f13cd0690b, type: 3}
+  - {fileID: 21300038, guid: 0eefa1e01007349e7ae001f13cd0690b, type: 3}

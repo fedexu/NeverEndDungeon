@@ -4,12 +4,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelSpriteElements
+public class LevelSpriteElements : MonoBehaviour
 {
     public Sprite[] walls;
     public Sprite[] guards;
-    public Sprite[] sideGuards;
     public Sprite[] backGuards;
+    public Sprite[] sideGuards;
     public Sprite[] guardsAngleUp;
     public Sprite[] guardsAngleDown;
     public Sprite[] guardsRight;

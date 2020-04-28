@@ -27,7 +27,7 @@ public class WallGenerator : MonoBehaviour
         {
             yield return null;
         }
-        elements = SpriteLevelController.Instance.levelSprites;
+        elements = SpriteLevelController.Instance.levelSprites[GameController.Instance.currentPlayerLevel-1];
 
         string component = transform.gameObject.tag;
         switch (component)
