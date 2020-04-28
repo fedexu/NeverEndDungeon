@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,8 +9,6 @@ public class LevelLoader : MonoBehaviour
 
     public GameObject loadingScreen;
     public GameObject toHide;
-    public Slider slider;
-    public Text progressText;
     public void LoadLevel(int sceneIndex)
     {
         StartCoroutine(loadAsynchronously(sceneIndex));
@@ -21,10 +20,7 @@ public class LevelLoader : MonoBehaviour
         loadingScreen.SetActive(true);
         toHide.SetActive(false);
         while (!operation.isDone){
-            float progress = Mathf.Clamp01(operation.progress / 0.9f);
-            slider.value = progress;
-            progressText.text = progress * 100f + "%";
-
+            // do staff in the meantime that is loading
             yield return null;
         }
     }
