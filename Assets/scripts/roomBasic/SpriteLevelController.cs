@@ -12,13 +12,26 @@ public class SpriteLevelController : MonoBehaviour
 
     public LevelSpriteElements levelSprites;
     //public data
-    public int levelToLoad = 2;
 
     public bool spriteLoadedFromDb = false;
 
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
-    {
+    {   
+        int levelToLoad = GameController.Instance.currentPlayerLevel;
         levelSprites = new LevelSpriteElements();
         Sprite[] sprites;
         List<Sprite> spriteList;
@@ -51,16 +64,4 @@ public class SpriteLevelController : MonoBehaviour
         Debug.Log("End loading level sprites");
     }
 
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
 }
