@@ -12,19 +12,28 @@ public class RoomSpawner : MonoBehaviour
     // 4 -> need right door
     public RoomDescriber describer;
     public bool spawned = false;
-    private float waitTime = 4f;
     private RoomTemplates templates;
     private int rand;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        Destroy(gameObject, waitTime);
         templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
         describer = transform.parent.gameObject.GetComponent<RoomDescriber>();
         Invoke("spawn", 0.1f);
         describer.roomType = transform.root.name;
+        StartCoroutine(cleanSpawner());
     }
+
+    private IEnumerator cleanSpawner()
+    {
+        while (templates != null && !templates.isCompletedCreation())
+        {   
+            yield return null;
+        }
+
+        Destroy(gameObject);
+    }
+
 
     // Update is called once per frame
     void spawn()

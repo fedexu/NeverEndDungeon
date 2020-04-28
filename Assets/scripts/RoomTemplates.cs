@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RoomTemplates : MonoBehaviour
 {
@@ -21,17 +22,17 @@ public class RoomTemplates : MonoBehaviour
     private float waitTime = 4f;
     private bool completedDungeon = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
+    private GameObject LoadingLayer;
 
+    void Awake() {
+        LoadingLayer = GameObject.FindGameObjectWithTag("LoadingLayer");
     }
 
     // Update is called once per frame
     void Update()
     {
         // when things got finish to load
-        if (waitTime <= 0 && completedDungeon == false)
+        if (rooms.Count > maxRoomsNumber  && completedDungeon == false)
         {
             //TO DO add ladder to last room to go to the next level
 
@@ -39,11 +40,17 @@ public class RoomTemplates : MonoBehaviour
             closeDungeonDoor();
 
             completedDungeon = true;
+            LoadingLayer.GetComponent<LoadingLayerController>().removeLoadingLayer();
         }
         else
         {
             waitTime -= Time.deltaTime;
         }
+    }
+
+
+    public bool isCompletedCreation(){
+        return completedDungeon;
     }
 
     // when spawning is done, this will close the dungeon exits

@@ -10,8 +10,14 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D body;
 
     private Vector3 movement;
+    private RoomTemplates templates;
 
     private bool facingRight = true;
+
+    void Awake()
+    {
+        templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +35,10 @@ public class PlayerController : MonoBehaviour
 
     private void processInput()
     {
-        movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
+        if (templates.isCompletedCreation())
+        {
+            movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
+        }
     }
 
     private void move()

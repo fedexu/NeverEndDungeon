@@ -18,12 +18,15 @@ public class WallGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("startDelay", 2f);
-
+        StartCoroutine(loadSprites());
     }
 
-    private void startDelay()
+    private IEnumerator loadSprites()
     {
+        while (!SpriteLevelController.Instance.spriteLoadedFromDb)
+        {
+            yield return null;
+        }
         elements = SpriteLevelController.Instance.levelSprites;
 
         string component = transform.gameObject.tag;

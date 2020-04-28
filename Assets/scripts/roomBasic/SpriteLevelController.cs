@@ -14,6 +14,8 @@ public class SpriteLevelController : MonoBehaviour
     //public data
     public int levelToLoad = 2;
 
+    public bool spriteLoadedFromDb = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +47,7 @@ public class SpriteLevelController : MonoBehaviour
         levelSprites.cosmeticsCollision = sprites.Skip(6).Take(3).ToArray();
         levelSprites.column = sprites.Skip(9).Take(1).ToArray();
 
+        spriteLoadedFromDb = true;
         Debug.Log("End loading level sprites");
     }
 

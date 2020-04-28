@@ -24,6 +24,7 @@ TagManager:
   - Wall_2_H
   - Wall_2_I
   - Wall_2_L
+  - LoadingLayer
   layers:
   - Default
   - TransparentFX
