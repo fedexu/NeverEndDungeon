@@ -5,28 +5,44 @@ using UnityEngine;
 public class MenuController : MonoBehaviour
 {
     public GameObject LevelLoader;
-    public GameObject playBtton;
-    public GameObject playLevel1Btton;
-    public GameObject playLevel2Btton;
-    public GameObject playLevel3Btton;
+    public GameObject newGame;
+    public GameObject character;
+    public GameObject options;
+    public GameObject credits;
 
-    public void onClickPlay(){
-        playBtton.SetActive(false);
-        playLevel1Btton.SetActive(true);
-        playLevel2Btton.SetActive(true);
-        playLevel3Btton.SetActive(true);
-    }
-
-    public void playGame(int level){
-        GameController.Instance.currentPlayerLevel = level;
+    public void playGame(){
         LevelLoader.GetComponent<LevelLoader>().LoadLevel(1);
     }
     
     private void Start() {
-        playBtton.SetActive(true);
-        playLevel1Btton.SetActive(false);
-        playLevel2Btton.SetActive(false);
-        playLevel3Btton.SetActive(false);
+        showStartMenu();
+    }
+
+    public void quit(){
+        Debug.Log("Exit application");
+        Application.Quit();
+    }
+
+    public void buttonClickedBehavior(string buttonText){
+        if (buttonText == "NEW GAME"){
+            playGame();
+        }
+        if (buttonText == "OPTIONS"){
+            showOptions();
+        }
+
+    }
+
+    public void showStartMenu(){
+        newGame.SetActive(true);
+        character.SetActive(true);
+        options.SetActive(true);
+        credits.SetActive(true);
+        
+    }
+
+    public void showOptions(){
+
     }
 
 

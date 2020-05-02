@@ -68,7 +68,7 @@ public class SpriteLevelController : MonoBehaviour
         levelSprites[2] = level3Sprite;
 
         spriteLoadedFromDb = true;
-        Debug.Log("End loading level sprites");
+        // Debug.Log("End loading level sprites");
     }
 
 }
