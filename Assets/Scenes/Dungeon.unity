@@ -2532,6 +2532,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 968337428604567845, guid: e93660a3da9d64fa2b97b5d1e09a6fa3,
         type: 3}
+    - target: {fileID: 4388310103443762246, guid: a364c8c050e4b4562a0fcfceb77eb2e7,
+        type: 3}
+      propertyPath: dungeonContainer
+      value: 
+      objectReference: {fileID: 1487598184}
     - target: {fileID: 4388310103443762247, guid: a364c8c050e4b4562a0fcfceb77eb2e7,
         type: 3}
       propertyPath: m_Name
