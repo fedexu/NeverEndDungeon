@@ -81,6 +81,7 @@ public class RoomSpawner : MonoBehaviour
         rand = Random.Range(0, rooms.Length);
         describerRoom = Instantiate(rooms[rand], transform.position, Quaternion.identity);
         describerRoom.name = rooms[rand].name;
+        describerRoom.transform.SetParent(templates.dungeonContainer.transform);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

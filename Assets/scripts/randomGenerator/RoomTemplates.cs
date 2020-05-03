@@ -17,6 +17,7 @@ public class RoomTemplates : MonoBehaviour
     public GameObject closedRoomR;
     //controller Variables
     public List<GameObject> rooms;
+    public GameObject dungeonContainer;
     public int maxRoomsNumber = 32;
 
     private float waitTime = 4f;
@@ -66,6 +67,7 @@ public class RoomTemplates : MonoBehaviour
                     // need to spawn a room with BOTTOM door
                     GameObject obj = Instantiate(closedRoomB, room.transform.position, Quaternion.identity);
                     obj.name = closedRoomB.name;
+                    obj.transform.SetParent(dungeonContainer.transform);
                 }
             }
             if (describer.roomType.IndexOf("B") != -1)
@@ -75,6 +77,7 @@ public class RoomTemplates : MonoBehaviour
                     // need to spawn a room with TOP door
                     GameObject obj = Instantiate(closedRoomT, room.transform.position, Quaternion.identity);
                     obj.name = closedRoomT.name;
+                    obj.transform.SetParent(dungeonContainer.transform);
                 }
             }
             if (describer.roomType.IndexOf("R") != -1)
@@ -84,6 +87,7 @@ public class RoomTemplates : MonoBehaviour
                     // need to spawn a room with LEFT door
                     GameObject obj = Instantiate(closedRoomL, room.transform.position, Quaternion.identity);
                     obj.name = closedRoomL.name;
+                    obj.transform.SetParent(dungeonContainer.transform);
                 }
             }
             if (describer.roomType.IndexOf("L") != -1)
@@ -93,6 +97,7 @@ public class RoomTemplates : MonoBehaviour
                     // need to spawn a room with RIGHT door
                     GameObject obj = Instantiate(closedRoomR, room.transform.position, Quaternion.identity);
                     obj.name = closedRoomR.name;
+                    obj.transform.SetParent(dungeonContainer.transform);
                 }
             }
         }
