@@ -232,4 +232,15 @@ public class bl_Joystick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             return (StickRect.position.y - DeathArea.y) / Radio;
         }
     }
+
+    private Vector3 ChangePoint;
+    private void ChangePosition()
+    {
+        if (Input.GetMouseButtonDown(0) && !transform.GetComponent<CircleCollider2D>().bounds.Contains(Input.mousePosition))
+        {
+            transform.position = new Vector3(Input.mousePosition.x + GetComponent<RectTransform>().rect.width / 2,
+            Input.mousePosition.y + GetComponent<RectTransform>().rect.height / 2);
+            ChangePoint = Input.mousePosition;
+        }
+    }
 }
