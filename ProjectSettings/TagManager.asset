@@ -25,6 +25,7 @@ TagManager:
   - Wall_2_I
   - Wall_2_L
   - LoadingLayer
+  - JoypadLayer
   layers:
   - Default
   - TransparentFX

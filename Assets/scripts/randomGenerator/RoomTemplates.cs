@@ -23,17 +23,21 @@ public class RoomTemplates : MonoBehaviour
     private float waitTime = 4f;
     private bool completedDungeon = false;
 
-    private GameObject LoadingLayer;
+    public GameObject LoadingLayer;
+    private GameObject JoypadLayer;
 
-    void Awake() {
-        LoadingLayer = GameObject.FindGameObjectWithTag("LoadingLayer");
+    void Awake()
+    {
+        LoadingLayer.SetActive(true);
+        JoypadLayer = GameObject.FindGameObjectWithTag("JoypadLayer");
+        JoypadLayer.transform.gameObject.GetComponent<CanvasGroup>().alpha = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
         // when things got finish to load
-        if (rooms.Count > maxRoomsNumber  && completedDungeon == false)
+        if (rooms.Count > maxRoomsNumber && completedDungeon == false)
         {
             //TO DO add ladder to last room to go to the next level
 
@@ -42,6 +46,10 @@ public class RoomTemplates : MonoBehaviour
 
             completedDungeon = true;
             LoadingLayer.GetComponent<LoadingLayerController>().removeLoadingLayer();
+            // if (SystemInfo.deviceType == DeviceType.Handheld){
+                JoypadLayer.transform.gameObject.GetComponent<CanvasGroup>().alpha = 1;
+            // }
+            
         }
         else
         {
@@ -50,7 +58,8 @@ public class RoomTemplates : MonoBehaviour
     }
 
 
-    public bool isCompletedCreation(){
+    public bool isCompletedCreation()
+    {
         return completedDungeon;
     }
 

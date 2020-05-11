@@ -11,12 +11,14 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 movement;
     private RoomTemplates templates;
+    [SerializeField] private bl_Joystick Joystick;
 
     private bool facingRight = true;
 
     void Awake()
     {
         templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
+        Joystick = FindObjectOfType<bl_Joystick>();
     }
 
     // Start is called before the first frame update
@@ -37,7 +39,8 @@ public class PlayerController : MonoBehaviour
     {
         if (templates.isCompletedCreation())
         {
-            movement = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
+                movement = new Vector3(Limit(Joystick.Horizontal) + Limit(Input.GetAxis("Horizontal")),
+                 Limit(Joystick.Vertical) + Limit(Input.GetAxis("Vertical")), 0.0f);
         }
     }
 
@@ -59,12 +62,38 @@ public class PlayerController : MonoBehaviour
 
     private void flip()
     {
-        if (Input.GetAxis("Horizontal") > 0 && !facingRight || Input.GetAxis("Horizontal") < 0 && facingRight)
+        if (movement.x > 0 && !facingRight || movement.x < 0 && facingRight)
         {
             facingRight = !facingRight;
             Vector3 scale = sprite.transform.localScale;
             scale.x *= -1;
             sprite.transform.localScale = scale;
+        }
+    }
+
+    private float Limit(float number)
+    {
+        if (number > 0f)
+        {
+            if (number > 1f)
+            {
+                return 1f;
+            }
+            else
+            {
+                return number;
+            }
+        }
+        else
+        {
+            if (number < -1f)
+            {
+                return -1f;
+            }
+            else
+            {
+                return number;
+            }
         }
     }
 

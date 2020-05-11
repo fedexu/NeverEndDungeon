@@ -30,5 +30,6 @@ public class LoadingLayerController : MonoBehaviour
             group.alpha -= 0.1f;
             yield return null;
         }
+        gameObject.SetActive(false);
     }
 }

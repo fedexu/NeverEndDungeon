@@ -7,19 +7,22 @@ using UnityEngine.SceneManagement;
 public class LevelLoader : MonoBehaviour
 {
 
-    public GameObject loadingScreen;
+    public GameObject LoadingLayer;
     public GameObject toHide;
+
     public void LoadLevel(int sceneIndex)
     {
         StartCoroutine(loadAsynchronously(sceneIndex));
     }
 
-    private IEnumerator loadAsynchronously(int sceneIndex){
+    private IEnumerator loadAsynchronously(int sceneIndex)
+    {
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
 
-        loadingScreen.SetActive(true);
+        LoadingLayer.SetActive(true);
         toHide.SetActive(false);
-        while (!operation.isDone){
+        while (!operation.isDone)
+        {
             // do staff in the meantime that is loading
             yield return null;
         }
