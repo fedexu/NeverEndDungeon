@@ -23,12 +23,12 @@ public class RoomTemplates : MonoBehaviour
     private float waitTime = 4f;
     private bool completedDungeon = false;
 
-    public GameObject LoadingLayer;
+    public GameController gameController;
     private GameObject JoypadLayer;
 
     void Awake()
     {
-        LoadingLayer.SetActive(true);
+        gameController = FindObjectOfType<GameController>();
         JoypadLayer = GameObject.FindGameObjectWithTag("JoypadLayer");
         JoypadLayer.transform.gameObject.GetComponent<CanvasGroup>().alpha = 0;
     }
@@ -37,19 +37,23 @@ public class RoomTemplates : MonoBehaviour
     void Update()
     {
         // when things got finish to load
-        if (rooms.Count > maxRoomsNumber && completedDungeon == false)
+        if (rooms.Count >= maxRoomsNumber && completedDungeon == false)
         {
             //TO DO add ladder to last room to go to the next level
 
             //TO DO close all the open door
-            closeDungeonDoor();
+            Invoke("closeDungeonDoor", 0.5f);
 
             completedDungeon = true;
-            LoadingLayer.GetComponent<LoadingLayerController>().removeLoadingLayer();
+
+            if (gameController.GetLevelLoader().isLoading())
+            {
+                gameController.GetLevelLoader().removeLoadingLayer(true);
+            }
             // if (SystemInfo.deviceType == DeviceType.Handheld){
-                JoypadLayer.transform.gameObject.GetComponent<CanvasGroup>().alpha = 1;
+            JoypadLayer.transform.gameObject.GetComponent<CanvasGroup>().alpha = 1;
             // }
-            
+
         }
         else
         {

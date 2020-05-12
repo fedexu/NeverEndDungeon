@@ -5,20 +5,22 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
+    private GameController gameController;
     public Animator animator;
     public GameObject sprite;
     public Rigidbody2D body;
 
     private Vector3 movement;
     private RoomTemplates templates;
-    [SerializeField] private bl_Joystick Joystick;
+    [SerializeField] private FloatingJoystick Joystick;
 
     private bool facingRight = true;
 
     void Awake()
     {
         templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
-        Joystick = FindObjectOfType<bl_Joystick>();
+        Joystick = FindObjectOfType<FloatingJoystick>();
+        gameController = FindObjectOfType<GameController>();
     }
 
     // Start is called before the first frame update
@@ -37,16 +39,15 @@ public class PlayerController : MonoBehaviour
 
     private void processInput()
     {
-        if (templates.isCompletedCreation())
+        if (templates.isCompletedCreation() && gameController.isPlaying)
         {
-                movement = new Vector3(Limit(Joystick.Horizontal) + Limit(Input.GetAxis("Horizontal")),
-                 Limit(Joystick.Vertical) + Limit(Input.GetAxis("Vertical")), 0.0f);
+            movement = new Vector3(movement8Axis(Joystick.Horizontal) + movement8Axis(Input.GetAxis("Horizontal")),
+             movement8Axis(Joystick.Vertical) + movement8Axis(Input.GetAxis("Vertical")), 0.0f);
         }
     }
 
     private void move()
     {
-        //transform.position = transform.position + movement * Time.deltaTime;
         body.velocity = new Vector2(movement.x, movement.y);
     }
 
@@ -71,30 +72,32 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private float Limit(float number)
+    private float movement8Axis(float number)
     {
-        if (number > 0f)
+        if (number > 0.010f)
         {
-            if (number > 1f)
+            if (number > 0.75f)
             {
                 return 1f;
             }
-            else
+            if (number > 0.25f && number < 0.75f)
             {
-                return number;
+                return 0.5f;
             }
         }
-        else
+        if (number < -0.010f)
         {
-            if (number < -1f)
+            if (number < -0.75f)
             {
                 return -1f;
             }
-            else
+            if (number < -0.25f && number > -0.75f)
             {
-                return number;
+                return -0.5f;
             }
         }
+        return 0f;
+
     }
 
 }

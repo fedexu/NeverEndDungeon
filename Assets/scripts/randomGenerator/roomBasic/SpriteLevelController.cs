@@ -71,4 +71,15 @@ public class SpriteLevelController : MonoBehaviour
         // Debug.Log("End loading level sprites");
     }
 
+    public static int spriteToLoad(int level){
+        if (level <= 4 ){
+            return 0;
+        }
+        
+        if (level <= 8 ){
+            return 1;
+        }
+        return 2;
+    }
+
 }

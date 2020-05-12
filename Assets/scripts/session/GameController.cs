@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEditor;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -11,7 +12,9 @@ public class GameController : MonoBehaviour
     public static GameController Instance { get; private set; }
 
     public int currentPlayerLevel;
+    public int hp;
 
+    public bool isPlaying = true;
 
     private void Awake()
     {
@@ -27,7 +30,18 @@ public class GameController : MonoBehaviour
     }
 
     void Start() {
-        currentPlayerLevel = 3;
+        LoadLoadingScene();
+        currentPlayerLevel = 1;
+        hp = 10;
+    }
+
+    private void LoadLoadingScene(){
+         SceneManager.LoadScene("LoadingScene", LoadSceneMode.Additive);
+    }
+
+
+    public LevelLoader GetLevelLoader(){
+        return FindObjectOfType<LevelLoader>();
     }
 
 }

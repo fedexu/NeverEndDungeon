@@ -23,7 +23,8 @@ public class FloorGenerator : MonoBehaviour
         {
             yield return null;
         }
-        elements = SpriteLevelController.Instance.levelSprites[GameController.Instance.currentPlayerLevel-1];
+        elements = SpriteLevelController.Instance.levelSprites[
+            SpriteLevelController.spriteToLoad(GameController.Instance.currentPlayerLevel)];
 
         string component = transform.gameObject.tag;
         switch (component)
